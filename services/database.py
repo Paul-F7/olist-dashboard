@@ -1,5 +1,7 @@
+import sqlite3
+
 def get_connection():
-    return sqlite3.connect('../data/olist.db')
+    return sqlite3.connect('data/olist.db')
 
 def close_connection(conn):
     if conn:

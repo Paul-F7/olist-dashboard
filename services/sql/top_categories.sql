@@ -4,7 +4,7 @@ SELECT
     SUM(oi.price) as revenue
 FROM order_items oi
 JOIN products p ON oi.product_id = p.product_id
-LEFT JOIN category_translation t 
+LEFT JOIN translation t
     ON p.product_category_name = t.product_category_name
 GROUP BY category
 ORDER BY revenue DESC

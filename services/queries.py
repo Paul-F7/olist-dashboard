@@ -1,11 +1,11 @@
 import pandas as pd
 import sqlite3
-from database import get_connection, close_connection
+from services.database import get_connection, close_connection
 
 #Exectures sql file and returns as DataFrame
 def execute_sql(filename):
     conn = get_connection()
-    sql_path = f'sql/{filename}'
+    sql_path = f'services/sql/{filename}'
 
     with open(sql_path, 'r') as f:
         query = f.read()
